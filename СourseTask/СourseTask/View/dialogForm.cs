@@ -27,7 +27,7 @@ namespace СourseTask
 
         private void openButton_Click(object sender, EventArgs e)
         {
-            this._model.OpenFile(openFileDialog1, tabControl, dialogListBox);
+            Dialog.ReadFromFile();
         }
     }
 }

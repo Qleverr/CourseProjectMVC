@@ -15,11 +15,16 @@ namespace СourseTask
 {
     class Controller
     {
-        private Model myModel;
+        private Model _model;
 
-        private void toDialogFormToolStripMenuItem_Click(object sender, EventArgs e)
+        public Controller()
         {
-            MessageBox.Show("Ok");
+            this._model = new Model();
+        }
+
+        public void OpenFile()
+        {
+            this._model.OpenFile()
         }
     }
 }
