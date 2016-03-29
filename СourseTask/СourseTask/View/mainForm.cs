@@ -12,10 +12,17 @@ namespace СourseTask
 {
     public partial class mainForm : Form
     {
+        //private Controller _controller;
+
         public mainForm()
         {
             InitializeComponent();
         }
+
+        //public void SetController(Controller controller)
+        //{
+        //    this._controller = controller;
+        //}
 
         private void answersList_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -27,5 +34,10 @@ namespace СourseTask
             dialogForm dialogForm = new dialogForm();
             dialogForm.ShowDialog();
         }
+
+        //private void openDialogToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    OpenDialog();
+        //}
     }
 }

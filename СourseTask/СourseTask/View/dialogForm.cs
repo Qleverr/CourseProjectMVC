@@ -7,16 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using СourseTask.Model;
 
 namespace СourseTask
 {
     public partial class dialogForm : Form
     {
-        private Model _model;
+        private Dialog _dialog;
 
         public dialogForm()
         {
-            this._model = new Model();
+            this._dialog = new Dialog();
             InitializeComponent();
         }
 
@@ -25,9 +26,19 @@ namespace СourseTask
 
         }
 
-        private void openButton_Click(object sender, EventArgs e)
+        //private void openButton_Click(object sender, EventArgs e)
+        //{
+        //    Dialog.ReadFromFile();
+        //}
+
+        public string GetInnerQuestion()
         {
-            Dialog.ReadFromFile();
+            return this.questionTextBox2.Text.ToString();
+        }
+
+        public void AddQuestionToList(string question)
+        {
+            this.questionTextBox.Text = question;
         }
     }
 }

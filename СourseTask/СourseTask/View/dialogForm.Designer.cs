@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.TabPage tabPage2;
-            this.button4 = new System.Windows.Forms.Button();
+            this.buttonAddQuestion = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.answerTextBox2 = new System.Windows.Forms.TextBox();
+            this.questionTextBox2 = new System.Windows.Forms.TextBox();
             this.answerLabel2 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.delButton = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@
             this.nextQuestion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.auestionsLabel = new System.Windows.Forms.Label();
             this.answerLabel = new System.Windows.Forms.Label();
-            this.answerTextBox = new System.Windows.Forms.TextBox();
+            this.questionTextBox = new System.Windows.Forms.TextBox();
             this.applyButton = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.createButton = new System.Windows.Forms.Button();
@@ -66,10 +66,10 @@
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(this.button4);
+            tabPage2.Controls.Add(this.buttonAddQuestion);
             tabPage2.Controls.Add(this.label5);
             tabPage2.Controls.Add(this.dataGridView2);
-            tabPage2.Controls.Add(this.answerTextBox2);
+            tabPage2.Controls.Add(this.questionTextBox2);
             tabPage2.Controls.Add(this.answerLabel2);
             tabPage2.Location = new System.Drawing.Point(4, 22);
             tabPage2.Name = "tabPage2";
@@ -79,15 +79,15 @@
             tabPage2.Text = "Добавить";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // buttonAddQuestion
             // 
-            this.button4.Location = new System.Drawing.Point(137, 306);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 28);
-            this.button4.TabIndex = 10;
-            this.button4.TabStop = false;
-            this.button4.Text = "Добавить вопрос";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonAddQuestion.Location = new System.Drawing.Point(137, 306);
+            this.buttonAddQuestion.Name = "buttonAddQuestion";
+            this.buttonAddQuestion.Size = new System.Drawing.Size(143, 28);
+            this.buttonAddQuestion.TabIndex = 10;
+            this.buttonAddQuestion.TabStop = false;
+            this.buttonAddQuestion.Text = "Добавить вопрос";
+            this.buttonAddQuestion.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -122,12 +122,12 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Номер следующего вопроса";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // answerTextBox2
+            // questionTextBox2
             // 
-            this.answerTextBox2.Location = new System.Drawing.Point(10, 35);
-            this.answerTextBox2.Name = "answerTextBox2";
-            this.answerTextBox2.Size = new System.Drawing.Size(421, 20);
-            this.answerTextBox2.TabIndex = 1;
+            this.questionTextBox2.Location = new System.Drawing.Point(10, 35);
+            this.questionTextBox2.Name = "questionTextBox2";
+            this.questionTextBox2.Size = new System.Drawing.Size(421, 20);
+            this.questionTextBox2.TabIndex = 1;
             // 
             // answerLabel2
             // 
@@ -147,7 +147,7 @@
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.auestionsLabel);
             this.tabPage1.Controls.Add(this.answerLabel);
-            this.tabPage1.Controls.Add(this.answerTextBox);
+            this.tabPage1.Controls.Add(this.questionTextBox);
             this.tabPage1.Controls.Add(this.applyButton);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -188,7 +188,6 @@
             // 
             // dialogListBox
             // 
-            this.dialogListBox.FormattingEnabled = true;
             this.dialogListBox.Location = new System.Drawing.Point(10, 6);
             this.dialogListBox.Name = "dialogListBox";
             this.dialogListBox.Size = new System.Drawing.Size(422, 82);
@@ -239,13 +238,13 @@
             this.answerLabel.TabIndex = 5;
             this.answerLabel.Text = "Вопрос";
             // 
-            // answerTextBox
+            // questionTextBox
             // 
-            this.answerTextBox.Location = new System.Drawing.Point(10, 107);
-            this.answerTextBox.Name = "answerTextBox";
-            this.answerTextBox.ReadOnly = true;
-            this.answerTextBox.Size = new System.Drawing.Size(422, 20);
-            this.answerTextBox.TabIndex = 4;
+            this.questionTextBox.Location = new System.Drawing.Point(10, 107);
+            this.questionTextBox.Name = "questionTextBox";
+            this.questionTextBox.ReadOnly = true;
+            this.questionTextBox.Size = new System.Drawing.Size(422, 20);
+            this.questionTextBox.TabIndex = 4;
             // 
             // applyButton
             // 
@@ -261,7 +260,7 @@
             // 
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(tabPage2);
-            this.tabControl.Enabled = false;
+            this.tabControl.HotTrack = true;
             this.tabControl.Location = new System.Drawing.Point(12, 86);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -286,7 +285,6 @@
             this.openButton.TabIndex = 5;
             this.openButton.Text = "Открыть файл";
             this.openButton.UseVisualStyleBackColor = true;
-            this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
             // workWithFilesGroupBox
             // 
@@ -307,7 +305,7 @@
             // 
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(662, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(476, 24);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -315,7 +313,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 459);
+            this.ClientSize = new System.Drawing.Size(476, 459);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.workWithFilesGroupBox);
             this.Controls.Add(this.tabControl);
@@ -336,10 +334,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonAddQuestion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.TextBox answerTextBox2;
+        private System.Windows.Forms.TextBox questionTextBox2;
         private System.Windows.Forms.Label answerLabel2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button delButton;
@@ -351,7 +349,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nextQuestion;
         private System.Windows.Forms.Label auestionsLabel;
         private System.Windows.Forms.Label answerLabel;
-        private System.Windows.Forms.TextBox answerTextBox;
+        private System.Windows.Forms.TextBox questionTextBox;
         private System.Windows.Forms.Button applyButton;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.Button createButton;

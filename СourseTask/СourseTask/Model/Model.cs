@@ -14,28 +14,15 @@ using СourseTask.HelpfulTools;
 
 namespace СourseTask.Model
 {
-    class Model
+    class Dialog
     {
-        private List<Record> _dialog;
+        private List<Record> _elements;
 
-        public Model()
-        {
-            this._dialog = new List<Record>();
-        }
+        public List<Record> Elements { get { return this._elements; } }
 
-        public void AddRecord(Record record)
+        public Dialog()
         {
-            this._dialog.Add(record);
-        }
-
-        public Record GetRecordByNumber(string num)
-        {
-            foreach (Record rec in this._dialog)
-            {
-                if (rec.Question.Num == num)
-                    return rec;
-            }
-            return new Record(new Question("Не найдено.", "-1"), new Answer[0]);
+            this._elements = new List<Record>();
         }     
     }
 }

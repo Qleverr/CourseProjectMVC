@@ -16,7 +16,9 @@ namespace СourseTask
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainForm());
+            dialogForm view = new dialogForm();
+            Controller controller = new Controller(view);
+            Application.Run(view);
         }
     }
 }

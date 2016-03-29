@@ -10,6 +10,7 @@ namespace СourseTask._De_Serializer
 {
     class _De_Serializer
     {
+        XMLDesigner workFile;
         private void SaveFile(SaveFileDialog saveFileDialog, TabControl tabControl)
         {
             string pathToFile = String.Empty;
