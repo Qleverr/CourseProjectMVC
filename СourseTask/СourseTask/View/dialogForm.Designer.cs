@@ -88,6 +88,7 @@
             this.buttonAddQuestion.TabStop = false;
             this.buttonAddQuestion.Text = "Добавить вопрос";
             this.buttonAddQuestion.UseVisualStyleBackColor = false;
+            this.buttonAddQuestion.Click += new System.EventHandler(this.buttonAddQuestion_Click);
             // 
             // label5
             // 
@@ -285,6 +286,7 @@
             this.openButton.TabIndex = 5;
             this.openButton.Text = "Открыть файл";
             this.openButton.UseVisualStyleBackColor = true;
+            this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
             // workWithFilesGroupBox
             // 

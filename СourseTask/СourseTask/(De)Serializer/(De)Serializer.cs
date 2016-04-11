@@ -8,10 +8,15 @@ using СourseTask.HelpfulTools;
 
 namespace СourseTask._De_Serializer
 {
-    class _De_Serializer
+    class Serializer
     {
         XMLDesigner workFile;
-        private void SaveFile(SaveFileDialog saveFileDialog, TabControl tabControl)
+
+        public Serializer()
+        {
+        }
+
+        public void CreateFile(SaveFileDialog saveFileDialog, TabControl tabControl)
         {
             string pathToFile = String.Empty;
             saveFileDialog.Filter = "XML files(*.xml)|*.xml|All files(*.*)|*.*";
@@ -25,6 +30,14 @@ namespace СourseTask._De_Serializer
             }
             else
                 MessageBox.Show("Файл не сохранен!", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+
+    class Deserializer
+    {
+        XMLDesigner workFile;
+        public Deserializer()
+        {
         }
 
         public void OpenFile(OpenFileDialog openFileDialog, TabControl tabControl, ListBox listBox)

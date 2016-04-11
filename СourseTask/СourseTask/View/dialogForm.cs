@@ -7,29 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using СourseTask.Model;
 
 namespace СourseTask
 {
     public partial class dialogForm : Form
     {
-        private Dialog _dialog;
+        public delegate void UserEventHandler();
+
+        public event UserEventHandler AddQuestion;
+        public event UserEventHandler OpenFile;
+        public event UserEventHandler CreateFile;
+
+        public bool _openFile = false;
+        public bool _addQuestion = false;
 
         public dialogForm()
         {
-            this._dialog = new Dialog();
             InitializeComponent();
         }
 
         private void createButton_Click(object sender, EventArgs e)
         {
-
+            CreateFile();
         }
 
-        //private void openButton_Click(object sender, EventArgs e)
-        //{
-        //    Dialog.ReadFromFile();
-        //}
+        private void openButton_Click(object sender, EventArgs e)
+        {
+            OpenFile();
+        }
 
         public string GetInnerQuestion()
         {
@@ -38,7 +43,32 @@ namespace СourseTask
 
         public void AddQuestionToList(string question)
         {
-            this.questionTextBox.Text = question;
+            this.dialogListBox.Items.Add(question);
+        }
+
+        public void buttonAddQuestion_Click(object sender, EventArgs e)
+        {
+            AddQuestion();
+        }
+
+        public SaveFileDialog GetSaveFileDialog()
+        {
+            return this.saveFileDialog1;
+        }
+
+        public OpenFileDialog GetOpenFileDialog()
+        {
+            return this.openFileDialog1;
+        }
+
+        public TabControl GetTabConstrol()
+        {
+            return this.tabControl;
+        }
+
+        public ListBox GetListBox()
+        {
+            return this.dialogListBox;
         }
     }
 }

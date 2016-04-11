@@ -39,7 +39,6 @@
             this.закрытьСистемуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveDialogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openDialogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toDialogForm_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.qbox = new System.Windows.Forms.GroupBox();
@@ -105,31 +104,24 @@
             // закрытьСистемуToolStripMenuItem
             // 
             this.закрытьСистемуToolStripMenuItem.Name = "закрытьСистемуToolStripMenuItem";
-            this.закрытьСистемуToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.закрытьСистемуToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             // 
             // saveDialogToolStripMenuItem
             // 
             this.saveDialogToolStripMenuItem.Name = "saveDialogToolStripMenuItem";
-            this.saveDialogToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.saveDialogToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.saveDialogToolStripMenuItem.Text = "Сохранить ход диалога";
             // 
             // openDialogToolStripMenuItem
             // 
             this.openDialogToolStripMenuItem.Name = "openDialogToolStripMenuItem";
-            this.openDialogToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.openDialogToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.openDialogToolStripMenuItem.Text = "Открыть файл диалога";
-            // 
-            // toDialogForm_ToolStripMenuItem
-            // 
-            this.toDialogForm_ToolStripMenuItem.Name = "toDialogForm_ToolStripMenuItem";
-            this.toDialogForm_ToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-            this.toDialogForm_ToolStripMenuItem.Text = "Работа со сценарием диалога";
-            this.toDialogForm_ToolStripMenuItem.Click += new System.EventHandler(this.toDialogForm_ToolStripMenuItem_Click);
+            this.openDialogToolStripMenuItem.Click += new System.EventHandler(this.openDialogToolStripMenuItem_Click);
             // 
             // файлToolStripMenuItem
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toDialogForm_ToolStripMenuItem,
             this.openDialogToolStripMenuItem,
             this.saveDialogToolStripMenuItem,
             this.закрытьСистемуToolStripMenuItem});
@@ -222,7 +214,6 @@
         private System.Windows.Forms.ToolStripMenuItem закрытьСистемуToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveDialogToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openDialogToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toDialogForm_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.GroupBox qbox;

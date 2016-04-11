@@ -7,26 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using СourseTask.HelpfulTools;
 
 namespace СourseTask
 {
     public partial class mainForm : Form
     {
-        //private Controller _controller;
+        public delegate void UserEventHandler();
+
+        public event UserEventHandler OpenDialog;
+        public event UserEventHandler ToAnswer;
+        
 
         public mainForm()
         {
             InitializeComponent();
         }
 
-        //public void SetController(Controller controller)
-        //{
-        //    this._controller = controller;
-        //}
-
         private void answersList_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-
+            ToAnswer();
         }
 
         private void toDialogForm_ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,9 +35,40 @@ namespace СourseTask
             dialogForm.ShowDialog();
         }
 
-        //private void openDialogToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    OpenDialog();
-        //}
+        private void openDialogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenDialog();
+        }
+
+        public SaveFileDialog GetSaveFileDialog()
+        {
+            return this.saveFileDialog1;
+        }
+
+        public OpenFileDialog GetOpenFileDialog()
+        {
+            return this.openFileDialog1;
+        }
+
+        public ListBox GetDialogListBox()
+        {
+            return this.dialogList;
+        }
+
+        public ListBox GetAnsListBox()
+        {
+            return this.answersList;
+        }
+
+        public ListBox GetErrorsListBox()
+        {
+            return this.errorsList;
+        }
+
+        public TextBox GetQuestionTextBox()
+        {
+            return this.questionTextBox;
+        }
+
     }
 }

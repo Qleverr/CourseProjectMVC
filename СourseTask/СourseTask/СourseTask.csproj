@@ -46,10 +46,9 @@
   <ItemGroup>
     <Compile Include="%28De%29Serializer\%28De%29Serializer.cs" />
     <Compile Include="Controller.cs" />
-    <Compile Include="IView.cs" />
-    <Compile Include="Model\Answer.cs" />
-    <Compile Include="Model\Question.cs" />
-    <Compile Include="Model\Record.cs" />
+    <Compile Include="MyModel\Answer.cs" />
+    <Compile Include="MyModel\Question.cs" />
+    <Compile Include="MyModel\Record.cs" />
     <Compile Include="View\dialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,7 +63,7 @@
     </Compile>
     <Compile Include="HelpfulTools\XML.cs" />
     <Compile Include="HelpfulTools\XMLDesigner.cs" />
-    <Compile Include="Model\Model.cs" />
+    <Compile Include="MyModel\Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\dialogForm.resx">
@@ -96,7 +95,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
